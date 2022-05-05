@@ -1,19 +1,29 @@
 "use strict";
 
-// const result = confirm('Are you here?');
-// console.log(result);
+alert('Здравствуйте');
+const imya = prompt ('Как вас зовут?');
 
-// const b = prompt ("Че делаешь?","Сижу");
-// console.log(b);
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели за последнюю неделю?');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres:[],
+    privat: false
 
-const answer = [];
 
-answer[0] = prompt('Как ваше имя?','');
-answer[1] = prompt('Как ваша фамилия?','');
-answer[2] = prompt('Как ваше отчество?','');
+};
 
-const zxc = prompt('Получается,ты гей?','Нет,я не гей');
-const a = prompt('Пиздишь?','нет');
-alert('Пиздишь');
+const firstmovie= prompt('Один из последних фильмов?'),
+      rating = prompt('На сколько оцените его?'),
+      firstmovie1 = prompt('И еще один из последних фильмов?'),
+      rating1 = prompt ('Еще один раз оцените его');
 
-Document.write(answer);
+personalMovieDB.movies[firstmovie] = rating;
+personalMovieDB.movies[firstmovie1] = rating1;
+
+const vopros = prompt(imya+','+'Почему вы оценили первый фильм на такой рейтинг?');
+alert('Спасибо,' + imya + ', за ответы!');
+
+console.log(personalMovieDB);
+
